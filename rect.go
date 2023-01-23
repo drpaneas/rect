@@ -1,270 +1,270 @@
 package rect
 
-type rectangle struct {
+type Rectangle struct {
 	X, Y, Width, Height int
 }
 
-// Rect creates a new rectangle with the given X, Y, Width, and Height.
-func Rect(x, y, width, height int) *rectangle {
-	return &rectangle{x, y, width, height}
+// Rect creates a new Rectangle with the given X, Y, Width, and Height.
+func Rect(x, y, width, height int) *Rectangle {
+	return &Rectangle{x, y, width, height}
 }
 
-func (r *rectangle) getTop() int {
+func (r *Rectangle) getTop() int {
 	return r.Y
 }
-	
-func (r *rectangle) getLeft() int {
+
+func (r *Rectangle) getLeft() int {
 	return r.X
 }
 
-func (r *rectangle) getBottom() int {
+func (r *Rectangle) getBottom() int {
 	return r.Y + r.Height
 }
 
-func (r *rectangle) getRight() int {
+func (r *Rectangle) getRight() int {
 	return r.X + r.Width
 }
 
-func (r *rectangle) getTopLeft() (int, int) {
+func (r *Rectangle) getTopLeft() (int, int) {
 	return r.X, r.Y
 }
 
-func (r *rectangle) getBottomLeft() (int, int) {
+func (r *Rectangle) getBottomLeft() (int, int) {
 	return r.X, r.Y + r.Height
 }
 
-func (r *rectangle) getTopRight() (int, int) {
+func (r *Rectangle) getTopRight() (int, int) {
 	return r.X + r.Width, r.Y
 }
 
-func (r *rectangle) getBottomRight() (int, int) {
+func (r *Rectangle) getBottomRight() (int, int) {
 	return r.X + r.Width, r.Y + r.Height
 }
 
-func (r *rectangle) getMidTop() (int, int) {
+func (r *Rectangle) getMidTop() (int, int) {
 	return r.X + r.Width/2, r.Y
 }
 
-func (r *rectangle) getMidLeft() (int, int) {
+func (r *Rectangle) getMidLeft() (int, int) {
 	return r.X, r.Y + r.Height/2
 }
 
-func (r *rectangle) getMidBottom() (int, int) {
+func (r *Rectangle) getMidBottom() (int, int) {
 	return r.X + r.Width/2, r.Y + r.Height
 }
 
-func (r *rectangle) getMidRight() (int, int) {
+func (r *Rectangle) getMidRight() (int, int) {
 	return r.X + r.Width, r.Y + r.Height/2
 }
 
-func (r *rectangle) getCenter() (int, int) {
+func (r *Rectangle) getCenter() (int, int) {
 	return r.X + r.Width/2, r.Y + r.Height/2
 }
 
-func (r *rectangle) getCenterX() int {
+func (r *Rectangle) getCenterX() int {
 	return r.X + r.Width/2
 }
 
-func (r *rectangle) getCenterY() int {
+func (r *Rectangle) getCenterY() int {
 	return r.Y + r.Height/2
 }
 
-func (r *rectangle) getSize() (int, int) {
+func (r *Rectangle) getSize() (int, int) {
 	return r.Width, r.Height
 }
 
-func (r *rectangle) getWidth() int {
+func (r *Rectangle) getWidth() int {
 	return r.Width
 }
 
-func (r *rectangle) setTop(val int) {
+func (r *Rectangle) setTop(val int) {
 	r.Y = val
 }
 
-func (r *rectangle) setRight(val int) {
+func (r *Rectangle) setRight(val int) {
 	r.X = val - r.Width
 }
 
-func (r *rectangle) setBottom(val int) {
+func (r *Rectangle) setBottom(val int) {
 	r.Y = val - r.Height
 }
 
-func (r *rectangle) setX(val int) {
+func (r *Rectangle) setX(val int) {
 	r.X = val
 }
 
-func (r *rectangle) setY(val int) {
+func (r *Rectangle) setY(val int) {
 	r.Y = val
 }
 
-func (r *rectangle) setTopLeft(x, y int) {
+func (r *Rectangle) setTopLeft(x, y int) {
 	r.X = x
 	r.Y = y
 }
 
-func (r *rectangle) setBottomLeft(x, y int) {
+func (r *Rectangle) setBottomLeft(x, y int) {
 	r.X = x
 	r.Y = y - r.Height
 }
 
-func (r *rectangle) setTopRight(x, y int) {
+func (r *Rectangle) setTopRight(x, y int) {
 	r.X = x - r.Width
 	r.Y = y
 }
 
-func (r *rectangle) setBottomRight(x, y int) {
+func (r *Rectangle) setBottomRight(x, y int) {
 	r.X = x - r.Width
 	r.Y = y - r.Height
 }
 
-func (r *rectangle) setMidTop(x, y int) {
+func (r *Rectangle) setMidTop(x, y int) {
 	r.X = x - r.Width/2
 	r.Y = y
 }
 
-func (r *rectangle) setMidLeft(x, y int) {
+func (r *Rectangle) setMidLeft(x, y int) {
 	r.X = x
 	r.Y = y - r.Height/2
 }
 
-func (r *rectangle) setMidBottom(x, y int) {
+func (r *Rectangle) setMidBottom(x, y int) {
 	r.X = x - r.Width/2
 	r.Y = y - r.Height
 }
 
-func (r *rectangle) setMidRight(x, y int) {
+func (r *Rectangle) setMidRight(x, y int) {
 	r.X = x - r.Width
 	r.Y = y - r.Height/2
 }
 
-func (r *rectangle) setCenter(x, y int) {
+func (r *Rectangle) setCenter(x, y int) {
 	r.X = x - r.Width/2
 	r.Y = y - r.Height/2
 }
 
-func (r *rectangle) setCenterX(val int) {
+func (r *Rectangle) setCenterX(val int) {
 	r.X = val - r.Width/2
 }
 
-func (r *rectangle) setCenterY(val int) {
+func (r *Rectangle) setCenterY(val int) {
 	r.Y = val - r.Height/2
 }
 
-func (r *rectangle) setSize(width, height int) {
+func (r *Rectangle) setSize(width, height int) {
 	r.Width = width
 	r.Height = height
 }
 
-func (r *rectangle) setHeight(val int) {
+func (r *Rectangle) setHeight(val int) {
 	r.Height = val
 }
 
-func (r *rectangle) Top(val ...int) int {
+func (r *Rectangle) Top(val ...int) int {
 	if len(val) > 0 {
 		r.setTop(val[0])
 	}
 	return r.getTop()
 }
 
-func (r *rectangle) Left(val ...int) int {
+func (r *Rectangle) Left(val ...int) int {
 	if len(val) > 0 {
 		r.setX(val[0])
 	}
 	return r.X
 }
 
-func (r *rectangle) Bottom(val ...int) int {
+func (r *Rectangle) Bottom(val ...int) int {
 	if len(val) > 0 {
 		r.setBottom(val[0])
 	}
 	return r.getBottom()
 }
 
-func (r *rectangle) Right(val ...int) int {
+func (r *Rectangle) Right(val ...int) int {
 	if len(val) > 0 {
 		r.setRight(val[0])
 	}
 	return r.getRight()
 }
 
-func (r *rectangle) TopLeft(val ...int) (int, int) {
+func (r *Rectangle) TopLeft(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setTopLeft(val[0], val[1])
 	}
 	return r.getTopLeft()
 }
 
-func (r *rectangle) BottomLeft(val ...int) (int, int) {
+func (r *Rectangle) BottomLeft(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setBottomLeft(val[0], val[1])
 	}
 	return r.getBottomLeft()
 }
 
-func (r *rectangle) TopRight(val ...int) (int, int) {
+func (r *Rectangle) TopRight(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setTopRight(val[0], val[1])
 	}
 	return r.getTopRight()
 }
 
-func (r *rectangle) BottomRight(val ...int) (int, int) {
+func (r *Rectangle) BottomRight(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setBottomRight(val[0], val[1])
 	}
 	return r.getBottomRight()
 }
 
-func (r *rectangle) MidTop(val ...int) (int, int) {
+func (r *Rectangle) MidTop(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setMidTop(val[0], val[1])
 	}
 	return r.getMidTop()
 }
 
-func (r *rectangle) MidLeft(val ...int) (int, int) {
+func (r *Rectangle) MidLeft(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setMidLeft(val[0], val[1])
 	}
 	return r.getMidLeft()
 }
 
-func (r *rectangle) MidBottom(val ...int) (int, int) {
+func (r *Rectangle) MidBottom(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setMidBottom(val[0], val[1])
 	}
 	return r.getMidBottom()
 }
 
-func (r *rectangle) MidRight(val ...int) (int, int) {
+func (r *Rectangle) MidRight(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setMidRight(val[0], val[1])
 	}
 	return r.getMidRight()
 }
 
-func (r *rectangle) Center(val ...int) (int, int) {
+func (r *Rectangle) Center(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setCenter(val[0], val[1])
 	}
 	return r.getCenter()
 }
 
-func (r *rectangle) CenterX(val ...int) int {
+func (r *Rectangle) CenterX(val ...int) int {
 	if len(val) > 0 {
 		r.setCenterX(val[0])
 	}
 	return r.getCenterX()
 }
 
-func (r *rectangle) CenterY(val ...int) int {
+func (r *Rectangle) CenterY(val ...int) int {
 	if len(val) > 0 {
 		r.setCenterY(val[0])
 	}
 	return r.getCenterY()
 }
 
-func (r *rectangle) Size(val ...int) (int, int) {
+func (r *Rectangle) Size(val ...int) (int, int) {
 	if len(val) > 1 {
 		r.setSize(val[0], val[1])
 	}

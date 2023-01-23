@@ -5,22 +5,22 @@ import "testing"
 func TestGetTop(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedY int
 	}{
 		{
 			name:      "Initial Y value",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedY: 20,
 		},
 		{
 			name:      "Modified Y value",
-			rect:      rectangle{X: 10, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 25, Width: 30, Height: 40},
 			expectedY: 25,
 		},
 		{
 			name:      "Moved Y value",
-			rect:      rectangle{X: 10, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 35, Width: 30, Height: 40},
 			expectedY: 35,
 		},
 	}
@@ -38,22 +38,22 @@ func TestGetTop(t *testing.T) {
 func TestGetLeft(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 	}{
 		{
 			name:      "Initial X value",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 10,
 		},
 		{
 			name:      "Modified X value",
-			rect:      rectangle{X: 15, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 20, Width: 30, Height: 40},
 			expectedX: 15,
 		},
 		{
 			name:      "Moved X value",
-			rect:      rectangle{X: 25, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 20, Width: 30, Height: 40},
 			expectedX: 25,
 		},
 	}
@@ -71,22 +71,22 @@ func TestGetLeft(t *testing.T) {
 func TestGetWidth(t *testing.T) {
 	testCases := []struct {
 		name          string
-		rect          rectangle
+		rect          Rectangle
 		expectedWidth int
 	}{
 		{
 			name:          "Initial Width value",
-			rect:          rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:          Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedWidth: 30,
 		},
 		{
 			name:          "Modified Width value",
-			rect:          rectangle{X: 10, Y: 20, Width: 35, Height: 40},
+			rect:          Rectangle{X: 10, Y: 20, Width: 35, Height: 40},
 			expectedWidth: 35,
 		},
 		{
 			name:          "Moved Width value",
-			rect:          rectangle{X: 10, Y: 20, Width: 45, Height: 40},
+			rect:          Rectangle{X: 10, Y: 20, Width: 45, Height: 40},
 			expectedWidth: 45,
 		},
 	}
@@ -104,22 +104,22 @@ func TestGetWidth(t *testing.T) {
 func TestGetRight(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 	}{
 		{
 			name:      "Initial X value",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 40,
 		},
 		{
 			name:      "Modified X value",
-			rect:      rectangle{X: 15, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 20, Width: 30, Height: 40},
 			expectedX: 45,
 		},
 		{
 			name:      "Moved X value",
-			rect:      rectangle{X: 25, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 20, Width: 30, Height: 40},
 			expectedX: 55,
 		},
 	}
@@ -137,22 +137,22 @@ func TestGetRight(t *testing.T) {
 func TestGetBottom(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedY int
 	}{
 		{
 			name:      "Initial Y value",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedY: 60,
 		},
 		{
 			name:      "Modified Y value",
-			rect:      rectangle{X: 10, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 25, Width: 30, Height: 40},
 			expectedY: 65,
 		},
 		{
 			name:      "Moved Y value",
-			rect:      rectangle{X: 10, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 35, Width: 30, Height: 40},
 			expectedY: 75,
 		},
 	}
@@ -170,25 +170,25 @@ func TestGetBottom(t *testing.T) {
 func TestGetTopLeft(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 10,
 			expectedY: 20,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 15,
 			expectedY: 25,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 35,
 		},
@@ -210,25 +210,25 @@ func TestGetTopLeft(t *testing.T) {
 func TestGetTopRight(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 20,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 45,
 			expectedY: 25,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 55,
 			expectedY: 35,
 		},
@@ -250,25 +250,25 @@ func TestGetTopRight(t *testing.T) {
 func TestGetBottomLeft(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 10,
 			expectedY: 60,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 15,
 			expectedY: 65,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 75,
 		},
@@ -290,25 +290,25 @@ func TestGetBottomLeft(t *testing.T) {
 func TestGetBottomRight(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 60,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 45,
 			expectedY: 65,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 55,
 			expectedY: 75,
 		},
@@ -330,25 +330,25 @@ func TestGetBottomRight(t *testing.T) {
 func TestGetCenter(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 40,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 30,
 			expectedY: 45,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 55,
 		},
@@ -370,25 +370,25 @@ func TestGetCenter(t *testing.T) {
 func TestGetMidTop(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 20,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 30,
 			expectedY: 25,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 35,
 		},
@@ -410,25 +410,25 @@ func TestGetMidTop(t *testing.T) {
 func TestGetMidBottom(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 60,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 30,
 			expectedY: 65,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 75,
 		},
@@ -450,25 +450,25 @@ func TestGetMidBottom(t *testing.T) {
 func TestGetMidLeft(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 10,
 			expectedY: 40,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 15,
 			expectedY: 45,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 25,
 			expectedY: 55,
 		},
@@ -490,25 +490,25 @@ func TestGetMidLeft(t *testing.T) {
 func TestGetMidRight(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 40,
 			expectedY: 40,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 45,
 			expectedY: 45,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 55,
 			expectedY: 55,
 		},
@@ -530,22 +530,22 @@ func TestGetMidRight(t *testing.T) {
 func TestGetCenterX(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedX int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedX: 25,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedX: 30,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedX: 40,
 		},
 	}
@@ -563,22 +563,22 @@ func TestGetCenterX(t *testing.T) {
 func TestGetCenterY(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedY int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedY: 40,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedY: 45,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedY: 55,
 		},
 	}
@@ -596,25 +596,25 @@ func TestGetCenterY(t *testing.T) {
 func TestGetSize(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		expectedW int
 		expectedH int
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			expectedW: 30,
 			expectedH: 40,
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			expectedW: 30,
 			expectedH: 40,
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			expectedW: 30,
 			expectedH: 40,
 		},
@@ -636,31 +636,31 @@ func TestGetSize(t *testing.T) {
 func TestSetTopLeft(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        15,
 			y:        25,
-			expected: rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			x:        20,
 			y:        30,
-			expected: rectangle{X: 20, Y: 30, Width: 30, Height: 40},
+			expected: Rectangle{X: 20, Y: 30, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			x:        30,
 			y:        40,
-			expected: rectangle{X: 30, Y: 40, Width: 30, Height: 40},
+			expected: Rectangle{X: 30, Y: 40, Width: 30, Height: 40},
 		},
 	}
 
@@ -677,17 +677,17 @@ func TestSetTopLeft(t *testing.T) {
 func TestSetTopRight(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Move values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        35,
 			y:        25,
-			expected: rectangle{X: 5, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 5, Y: 25, Width: 30, Height: 40},
 		},
 	}
 
@@ -704,17 +704,17 @@ func TestSetTopRight(t *testing.T) {
 func TestSetBottomLeft(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        15,
 			y:        55,
-			expected: rectangle{X: 15, Y: 15, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 15, Width: 30, Height: 40},
 		},
 	}
 
@@ -731,17 +731,17 @@ func TestSetBottomLeft(t *testing.T) {
 func TestSetBottomRight(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        35,
 			y:        55,
-			expected: rectangle{X: 5, Y: 15, Width: 30, Height: 40},
+			expected: Rectangle{X: 5, Y: 15, Width: 30, Height: 40},
 		},
 	}
 
@@ -758,31 +758,31 @@ func TestSetBottomRight(t *testing.T) {
 func TestSetCenter(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        25,
 			y:        40,
-			expected: rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			x:        30,
 			y:        45,
-			expected: rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			x:        40,
 			y:        55,
-			expected: rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			expected: Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 		},
 	}
 
@@ -799,21 +799,21 @@ func TestSetCenter(t *testing.T) {
 func TestSetCenterX(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        25,
-			expected: rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			x:        30,
-			expected: rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 		},
 	}
 
@@ -830,27 +830,27 @@ func TestSetCenterX(t *testing.T) {
 func TestSetCenterY(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			y:        40,
-			expected: rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			y:        45,
-			expected: rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			y:        55,
-			expected: rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			expected: Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 		},
 	}
 
@@ -867,27 +867,27 @@ func TestSetCenterY(t *testing.T) {
 func TestSetHeight(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		height   int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			height:   50,
-			expected: rectangle{X: 10, Y: 20, Width: 30, Height: 50},
+			expected: Rectangle{X: 10, Y: 20, Width: 30, Height: 50},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			height:   60,
-			expected: rectangle{X: 15, Y: 25, Width: 30, Height: 60},
+			expected: Rectangle{X: 15, Y: 25, Width: 30, Height: 60},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			height:   70,
-			expected: rectangle{X: 25, Y: 35, Width: 30, Height: 70},
+			expected: Rectangle{X: 25, Y: 35, Width: 30, Height: 70},
 		},
 	}
 
@@ -904,27 +904,27 @@ func TestSetHeight(t *testing.T) {
 func TestSetX(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		x        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			x:        50,
-			expected: rectangle{X: 50, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 50, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			x:        60,
-			expected: rectangle{X: 60, Y: 25, Width: 30, Height: 40},
+			expected: Rectangle{X: 60, Y: 25, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			x:        70,
-			expected: rectangle{X: 70, Y: 35, Width: 30, Height: 40},
+			expected: Rectangle{X: 70, Y: 35, Width: 30, Height: 40},
 		},
 	}
 
@@ -941,27 +941,27 @@ func TestSetX(t *testing.T) {
 func TestSetY(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		y        int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			y:        50,
-			expected: rectangle{X: 10, Y: 50, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 50, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			y:        60,
-			expected: rectangle{X: 15, Y: 60, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 60, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			y:        70,
-			expected: rectangle{X: 25, Y: 70, Width: 30, Height: 40},
+			expected: Rectangle{X: 25, Y: 70, Width: 30, Height: 40},
 		},
 	}
 
@@ -978,27 +978,27 @@ func TestSetY(t *testing.T) {
 func TestSetTop(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		top      int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			top:      50,
-			expected: rectangle{X: 10, Y: 50, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 50, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			top:      60,
-			expected: rectangle{X: 15, Y: 60, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 60, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			top:      70,
-			expected: rectangle{X: 25, Y: 70, Width: 30, Height: 40},
+			expected: Rectangle{X: 25, Y: 70, Width: 30, Height: 40},
 		},
 	}
 
@@ -1015,27 +1015,27 @@ func TestSetTop(t *testing.T) {
 func TestSetBottom(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		bottom   int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			bottom:   50,
-			expected: rectangle{X: 10, Y: 10, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 10, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			bottom:   60,
-			expected: rectangle{X: 15, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 15, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			bottom:   70,
-			expected: rectangle{X: 25, Y: 30, Width: 30, Height: 40},
+			expected: Rectangle{X: 25, Y: 30, Width: 30, Height: 40},
 		},
 	}
 
@@ -1052,21 +1052,21 @@ func TestSetBottom(t *testing.T) {
 func TestSetRight(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		right    int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			right:    50,
-			expected: rectangle{X: 20, Y: 20, Width: 30, Height: 40},
+			expected: Rectangle{X: 20, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 20, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 20, Y: 35, Width: 30, Height: 40},
 			right:    40,
-			expected: rectangle{X: 10, Y: 35, Width: 30, Height: 40},
+			expected: Rectangle{X: 10, Y: 35, Width: 30, Height: 40},
 		},
 	}
 
@@ -1083,31 +1083,31 @@ func TestSetRight(t *testing.T) {
 func TestSetMidTop(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		midTopX  int
 		midTopY  int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			midTopX:  50,
 			midTopY:  60,
-			expected: rectangle{X: 35, Y: 60, Width: 30, Height: 40},
+			expected: Rectangle{X: 35, Y: 60, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			midTopX:  60,
 			midTopY:  70,
-			expected: rectangle{X: 45, Y: 70, Width: 30, Height: 40},
+			expected: Rectangle{X: 45, Y: 70, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			midTopX:  70,
 			midTopY:  80,
-			expected: rectangle{X: 55, Y: 80, Width: 30, Height: 40},
+			expected: Rectangle{X: 55, Y: 80, Width: 30, Height: 40},
 		},
 	}
 
@@ -1124,31 +1124,31 @@ func TestSetMidTop(t *testing.T) {
 func TestSetMidLeft(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		midLeftX int
 		midLeftY int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			midLeftX: 50,
 			midLeftY: 60,
-			expected: rectangle{X: 50, Y: 40, Width: 30, Height: 40},
+			expected: Rectangle{X: 50, Y: 40, Width: 30, Height: 40},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			midLeftX: 60,
 			midLeftY: 70,
-			expected: rectangle{X: 60, Y: 50, Width: 30, Height: 40},
+			expected: Rectangle{X: 60, Y: 50, Width: 30, Height: 40},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			midLeftX: 70,
 			midLeftY: 80,
-			expected: rectangle{X: 70, Y: 60, Width: 30, Height: 40},
+			expected: Rectangle{X: 70, Y: 60, Width: 30, Height: 40},
 		},
 	}
 
@@ -1165,31 +1165,31 @@ func TestSetMidLeft(t *testing.T) {
 func TestSetMidBottom(t *testing.T) {
 	testCases := []struct {
 		name       string
-		rect       rectangle
+		rect       Rectangle
 		midBottomX int
 		midBottomY int
-		expected   rectangle
+		expected   Rectangle
 	}{
 		{
 			name:       "Initial values",
-			rect:       rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:       Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			midBottomX: 50,
 			midBottomY: 60,
-			expected:   rectangle{X: 35, Y: 20, Width: 30, Height: 40},
+			expected:   Rectangle{X: 35, Y: 20, Width: 30, Height: 40},
 		},
 		{
 			name:       "Modified values",
-			rect:       rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:       Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			midBottomX: 60,
 			midBottomY: 70,
-			expected:   rectangle{X: 45, Y: 30, Width: 30, Height: 40},
+			expected:   Rectangle{X: 45, Y: 30, Width: 30, Height: 40},
 		},
 		{
 			name:       "Moved values",
-			rect:       rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:       Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			midBottomX: 70,
 			midBottomY: 80,
-			expected:   rectangle{X: 55, Y: 40, Width: 30, Height: 40},
+			expected:   Rectangle{X: 55, Y: 40, Width: 30, Height: 40},
 		},
 	}
 
@@ -1206,31 +1206,31 @@ func TestSetMidBottom(t *testing.T) {
 func TestSetMidRight(t *testing.T) {
 	testCases := []struct {
 		name      string
-		rect      rectangle
+		rect      Rectangle
 		midRightX int
 		midRightY int
-		expected  rectangle
+		expected  Rectangle
 	}{
 		{
 			name:      "Initial values",
-			rect:      rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:      Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			midRightX: 50,
 			midRightY: 60,
-			expected:  rectangle{X: 20, Y: 40, Width: 30, Height: 40},
+			expected:  Rectangle{X: 20, Y: 40, Width: 30, Height: 40},
 		},
 		{
 			name:      "Modified values",
-			rect:      rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:      Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			midRightX: 60,
 			midRightY: 70,
-			expected:  rectangle{X: 30, Y: 50, Width: 30, Height: 40},
+			expected:  Rectangle{X: 30, Y: 50, Width: 30, Height: 40},
 		},
 		{
 			name:      "Moved values",
-			rect:      rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:      Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			midRightX: 70,
 			midRightY: 80,
-			expected:  rectangle{X: 40, Y: 60, Width: 30, Height: 40},
+			expected:  Rectangle{X: 40, Y: 60, Width: 30, Height: 40},
 		},
 	}
 
@@ -1247,31 +1247,31 @@ func TestSetMidRight(t *testing.T) {
 func TestSetSize(t *testing.T) {
 	testCases := []struct {
 		name     string
-		rect     rectangle
+		rect     Rectangle
 		width    int
 		height   int
-		expected rectangle
+		expected Rectangle
 	}{
 		{
 			name:     "Initial values",
-			rect:     rectangle{X: 10, Y: 20, Width: 30, Height: 40},
+			rect:     Rectangle{X: 10, Y: 20, Width: 30, Height: 40},
 			width:    50,
 			height:   60,
-			expected: rectangle{X: 10, Y: 20, Width: 50, Height: 60},
+			expected: Rectangle{X: 10, Y: 20, Width: 50, Height: 60},
 		},
 		{
 			name:     "Modified values",
-			rect:     rectangle{X: 15, Y: 25, Width: 30, Height: 40},
+			rect:     Rectangle{X: 15, Y: 25, Width: 30, Height: 40},
 			width:    60,
 			height:   70,
-			expected: rectangle{X: 15, Y: 25, Width: 60, Height: 70},
+			expected: Rectangle{X: 15, Y: 25, Width: 60, Height: 70},
 		},
 		{
 			name:     "Moved values",
-			rect:     rectangle{X: 25, Y: 35, Width: 30, Height: 40},
+			rect:     Rectangle{X: 25, Y: 35, Width: 30, Height: 40},
 			width:    70,
 			height:   80,
-			expected: rectangle{X: 25, Y: 35, Width: 70, Height: 80},
+			expected: Rectangle{X: 25, Y: 35, Width: 70, Height: 80},
 		},
 	}
 

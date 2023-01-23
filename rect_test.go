@@ -20,7 +20,7 @@ func TestTop(t *testing.T) {
 		t.Errorf("Top() returned incorrect value after modification. Expected: 25, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the top value of a rectangle after moving it
+	// Test case 3: getting and setting the top value of a Rectangle after moving it
 	rect.Top(rect.Top() + 10)
 	result = rect.Top()
 	if result != 35 {
@@ -43,7 +43,7 @@ func TestLeft(t *testing.T) {
 		t.Errorf("Left() returned incorrect value after modification. Expected: 15, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the left value of a rectangle after moving it
+	// Test case 3: getting and setting the left value of a Rectangle after moving it
 	rect.Left(rect.Left() + 10)
 	result = rect.Left()
 	if result != 25 {
@@ -66,7 +66,7 @@ func TestBottom(t *testing.T) {
 		t.Errorf("Bottom() returned incorrect value after modification. Expected: 65, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the bottom value of a rectangle after moving it
+	// Test case 3: getting and setting the bottom value of a Rectangle after moving it
 	rect.Bottom(rect.Bottom() + 10)
 	result = rect.Bottom()
 	if result != 75 {
@@ -89,7 +89,7 @@ func TestRight(t *testing.T) {
 		t.Errorf("Right() returned incorrect value after modification. Expected: 45, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the right value of a rectangle after moving it
+	// Test case 3: getting and setting the right value of a Rectangle after moving it
 	rect.Right(rect.Right() + 10)
 	result = rect.Right()
 	if result != 55 {
@@ -116,7 +116,7 @@ func TestTopLeft(t *testing.T) {
 		t.Logf("TopLeft() returned correct value after modification. Expected: (15, 25), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the top left point of a rectangle after moving it
+	// Test case 3: getting and setting the top left point of a Rectangle after moving it
 	rect.TopLeft(rect.X+10, rect.Y+10)
 	resultX, resultY = rect.TopLeft()
 	if resultX != 25 || resultY != 35 {
@@ -145,7 +145,7 @@ func TestBottomLeft(t *testing.T) {
 		t.Logf("BottomLeft() returned correct value after modification. Expected: (15, 65), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the bottom left point of a rectangle after moving it
+	// Test case 3: getting and setting the bottom left point of a Rectangle after moving it
 	rect.BottomLeft(rect.X+10, rect.Bottom()+10)
 	resultX, resultY = rect.BottomLeft()
 	if resultX != 25 || resultY != 75 {
@@ -174,7 +174,7 @@ func TestTopRight(t *testing.T) {
 		t.Logf("TopRight() returned correct value after modification. Expected: (45, 25), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the top right point of a rectangle after moving it
+	// Test case 3: getting and setting the top right point of a Rectangle after moving it
 	rect.TopRight(rect.Right()+10, rect.Y+10)
 	resultX, resultY = rect.TopRight()
 	if resultX != 55 || resultY != 35 {
@@ -203,7 +203,7 @@ func TestBottomRight(t *testing.T) {
 		t.Logf("BottomRight() returned correct value after modification. Expected: (45, 65), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the bottom right point of a rectangle after moving it
+	// Test case 3: getting and setting the bottom right point of a Rectangle after moving it
 	rect.BottomRight(rect.Right()+10, rect.Bottom()+10)
 	resultX, resultY = rect.BottomRight()
 	if resultX != 55 || resultY != 75 {
@@ -232,7 +232,7 @@ func TestMidTop(t *testing.T) {
 		t.Logf("MidTop() returned correct value after modification. Expected: (30, 25), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the mid top point of a rectangle after moving it
+	// Test case 3: getting and setting the mid top point of a Rectangle after moving it
 	rect.MidTop(rect.CenterX()+10, rect.Y+10)
 	resultX, resultY = rect.MidTop()
 	if resultX != 40 || resultY != 35 {
@@ -261,7 +261,7 @@ func TestMidLeft(t *testing.T) {
 		t.Logf("MidLeft() returned correct value after modification. Expected: (15, 45), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the mid left point of a rectangle after moving it
+	// Test case 3: getting and setting the mid left point of a Rectangle after moving it
 	rect.MidLeft(rect.X+10, rect.CenterY()+10)
 	resultX, resultY = rect.MidLeft()
 	if resultX != 25 || resultY != 55 {
@@ -290,7 +290,7 @@ func TestMidBottom(t *testing.T) {
 		t.Logf("MidBottom() returned correct value after modification. Expected: (30, 65), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the mid bottom point of a rectangle after moving it
+	// Test case 3: getting and setting the mid bottom point of a Rectangle after moving it
 	rect.MidBottom(rect.CenterX()+10, rect.Bottom()+10)
 	resultX, resultY = rect.MidBottom()
 	if resultX != 40 || resultY != 75 {
@@ -319,7 +319,7 @@ func TestMidRight(t *testing.T) {
 		t.Logf("MidRight() returned correct value after modification. Expected: (45, 45), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the mid right point of a rectangle after moving it
+	// Test case 3: getting and setting the mid right point of a Rectangle after moving it
 	rect.MidRight(rect.Right()+10, rect.CenterY()+10)
 	resultX, resultY = rect.MidRight()
 	if resultX != 55 || resultY != 55 {
@@ -348,7 +348,7 @@ func TestCenter(t *testing.T) {
 		t.Logf("Center() returned correct value after modification. Expected: (30, 45), Got: (%d, %d)", resultX, resultY)
 	}
 
-	// Test case 3: getting and setting the center point of a rectangle after moving it
+	// Test case 3: getting and setting the center point of a Rectangle after moving it
 	rect.Center(rect.CenterX()+10, rect.CenterY()+10)
 	resultX, resultY = rect.Center()
 	if resultX != 40 || resultY != 55 {
@@ -377,7 +377,7 @@ func TestCenterX(t *testing.T) {
 		t.Logf("CenterX() returned correct value after modification. Expected: 30, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the center X of a rectangle after moving it
+	// Test case 3: getting and setting the center X of a Rectangle after moving it
 	rect.CenterX(rect.CenterX() + 10)
 	result = rect.CenterX()
 	if result != 40 {
@@ -407,7 +407,7 @@ func TestCenterY(t *testing.T) {
 		t.Logf("CenterY() returned correct value after modification. Expected: 45, Got: %d", result)
 	}
 
-	// Test case 3: getting and setting the center Y of a rectangle after moving it
+	// Test case 3: getting and setting the center Y of a Rectangle after moving it
 	rect.CenterY(rect.CenterY() + 10)
 	result = rect.CenterY()
 	if result != 55 {
@@ -437,7 +437,7 @@ func TestSize(t *testing.T) {
 		t.Logf("Size() returned correct value after modification. Expected: (35, 45), Got: (%d, %d)", resultWidth, resultHeight)
 	}
 
-	// Test case 3: getting and setting the size of a rectangle after moving it
+	// Test case 3: getting and setting the size of a Rectangle after moving it
 	rect.Size(rect.Width+10, rect.Height+10)
 	resultWidth, resultHeight = rect.Size()
 	if resultWidth != 45 || resultHeight != 55 {
