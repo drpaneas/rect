@@ -446,3 +446,49 @@ func TestSize(t *testing.T) {
 		t.Logf("Expected size to be (45, 55), but got (%d, %d)", resultWidth, resultHeight)
 	}
 }
+
+func TestOverlaps(t *testing.T) {
+	// Test case 1: Check if the rectangles overlap
+	rect1 := r.Rect(10, 20, 30, 40)
+	rect2 := r.Rect(20, 30, 40, 50)
+
+	result := rect1.Overlaps(rect2)
+	if !result {
+		t.Errorf("Overlaps() returned incorrect value. Expected: true, Got: %t", result)
+	} else {
+		t.Logf("Overlaps() returned correct value. Expected: true, Got: %t", result)
+	}
+
+	// Test case 2: Check if the rectangles do not overlap
+	rect1 = r.Rect(10, 20, 30, 40)
+	rect2 = r.Rect(50, 60, 70, 80)
+
+	result = rect1.Overlaps(rect2)
+	if result {
+		t.Errorf("Overlaps() returned incorrect value. Expected: false, Got: %t", result)
+	} else {
+		t.Logf("Overlaps() returned correct value. Expected: false, Got: %t", result)
+	}
+}
+
+func TestEmpty(t *testing.T) {
+	// Test case 1: Check if the rectangle is empty
+	rect := r.Rect(0, 0, 0, 0)
+
+	result := rect.Empty()
+	if !result {
+		t.Errorf("Empty() returned incorrect value. Expected: true, Got: %t", result)
+	} else {
+		t.Logf("Empty() returned correct value. Expected: true, Got: %t", result)
+	}
+
+	// Test case 2: Check if the rectangle is not empty
+	rect = r.Rect(10, 20, 30, 40)
+
+	result = rect.Empty()
+	if result {
+		t.Errorf("Empty() returned incorrect value. Expected: false, Got: %t", result)
+	} else {
+		t.Logf("Empty() returned correct value. Expected: false, Got: %t", result)
+	}
+}

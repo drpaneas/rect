@@ -270,3 +270,14 @@ func (r *Rectangle) Size(val ...int) (int, int) {
 	}
 	return r.getSize()
 }
+
+// Overlaps creates Overlaps method to check if two rectangles overlap
+func (r *Rectangle) Overlaps(s *Rectangle) bool {
+	return !r.Empty() && !s.Empty() &&
+		r.Left() < s.Right() && s.Left() < r.Right() && r.Top() < s.Bottom() && s.Top() < r.Bottom()
+}
+
+// Empty reports whether the rectangle contains no points.
+func (r *Rectangle) Empty() bool {
+	return r.Left() >= r.Right() || r.Top() >= r.Bottom()
+}
