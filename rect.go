@@ -1,12 +1,15 @@
 package rect
 
+import "image/color"
+
 type Rectangle struct {
 	X, Y, Width, Height int
+	Color               color.Color
 }
 
 // Rect creates a new Rectangle with the given X, Y, Width, and Height.
 func Rect(x, y, width, height int) *Rectangle {
-	return &Rectangle{x, y, width, height}
+	return &Rectangle{x, y, width, height, color.White}
 }
 
 func (r *Rectangle) getTop() int {
