@@ -452,22 +452,22 @@ func TestOverlaps(t *testing.T) {
 	rect1 := r.Rect(10, 20, 30, 40)
 	rect2 := r.Rect(20, 30, 40, 50)
 
-	result := rect1.Overlaps(rect2)
+	result := rect1.CollidesWith(rect2)
 	if !result {
-		t.Errorf("Overlaps() returned incorrect value. Expected: true, Got: %t", result)
+		t.Errorf("CollidesWith() returned incorrect value. Expected: true, Got: %t", result)
 	} else {
-		t.Logf("Overlaps() returned correct value. Expected: true, Got: %t", result)
+		t.Logf("CollidesWith() returned correct value. Expected: true, Got: %t", result)
 	}
 
 	// Test case 2: Check if the rectangles do not overlap
 	rect1 = r.Rect(10, 20, 30, 40)
 	rect2 = r.Rect(50, 60, 70, 80)
 
-	result = rect1.Overlaps(rect2)
+	result = rect1.CollidesWith(rect2)
 	if result {
-		t.Errorf("Overlaps() returned incorrect value. Expected: false, Got: %t", result)
+		t.Errorf("CollidesWith() returned incorrect value. Expected: false, Got: %t", result)
 	} else {
-		t.Logf("Overlaps() returned correct value. Expected: false, Got: %t", result)
+		t.Logf("CollidesWith() returned correct value. Expected: false, Got: %t", result)
 	}
 }
 
